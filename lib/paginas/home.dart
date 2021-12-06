@@ -17,14 +17,14 @@ class PaginaHome extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Container(
-              height: 360,
+              height: 360.0,
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: <Widget>[
                   Header(),
                   OpcionesMenu(),
                   LateralMenu(),
-                  TituloPantalla(),
+                  TituloPantalla(titulo: "INGENIERIA EN SISTEMAS Y COMPUTACION", subTitulo: "CUM 8.0",),
                 ],
               ),
             ),

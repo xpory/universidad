@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:universidad/paginas/estadoDeCuenta.dart';
+import 'package:universidad/paginas/home.dart';
+import 'package:universidad/paginas/horario.dart';
+import 'package:universidad/paginas/materiaSeleccionada.dart';
+import 'package:universidad/paginas/pensum.dart';
+import 'package:universidad/paginas/servicioSocial.dart';
 
 class LateralMenu extends StatelessWidget {
   const LateralMenu();
@@ -16,7 +22,9 @@ class LateralMenu extends StatelessWidget {
           alignment: Alignment.topCenter,
           child: Row(
             children: <Widget>[
-              Container(
+              InkWell(
+                onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => PaginaHome()));},
+                child: Container(
                 height: categoryHeight,
                 child: Padding(
                   padding: const EdgeInsets.all(5.0),
@@ -24,22 +32,23 @@ class LateralMenu extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'Notas',
+                        'Inicio',
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.transparent,
-                            shadows: [
-                              Shadow(offset: Offset(0, -6), color: Colors.black)
+                          fontSize: 15,
+                          color: Colors.transparent,
+                          shadows: [
+                            Shadow(offset: Offset(0, -6), color: Colors.black)
                             ],
-                            decoration: TextDecoration.underline,
-                            decorationColor: Colors.red[800],
-                            decorationThickness: 4),
-                      ),
-                    ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
-              Container(
+              InkWell(
+                onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => PaginaPensum()));},
+                child: Container(
                 height: categoryHeight,
                 child: Padding(
                   padding: const EdgeInsets.all(5.0),
@@ -53,14 +62,17 @@ class LateralMenu extends StatelessWidget {
                           color: Colors.transparent,
                           shadows: [
                             Shadow(offset: Offset(0, -6), color: Colors.black)
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
-              Container(
+              InkWell(
+                onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => PaginaHorario()));},
+                child: Container(
                 height: categoryHeight,
                 child: Padding(
                   padding: const EdgeInsets.all(5.0),
@@ -70,17 +82,21 @@ class LateralMenu extends StatelessWidget {
                       Text(
                         'Horario',
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.transparent,
-                            shadows: [
-                              Shadow(offset: Offset(0, -6), color: Colors.black)
-                            ]),
-                      ),
-                    ],
+                          fontSize: 15,
+                          color: Colors.transparent,
+                          shadows: [
+                            Shadow(offset: Offset(0, -6), color: Colors.black)
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
-              Container(
+              InkWell(
+                onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => EstadoDeCuenta()));},
+                child: Container(
                 height: categoryHeight,
                 child: Padding(
                   padding: const EdgeInsets.all(5.0),
@@ -88,19 +104,23 @@ class LateralMenu extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'Estado de cuenta',
+                        'Estado de Cuenta',
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.transparent,
-                            shadows: [
-                              Shadow(offset: Offset(0, -6), color: Colors.black)
-                            ]),
-                      ),
-                    ],
+                          fontSize: 15,
+                          color: Colors.transparent,
+                          shadows: [
+                            Shadow(offset: Offset(0, -6), color: Colors.black)
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
-              Container(
+              InkWell(
+                onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => ServicioSocial()));},
+                child: Container(
                 height: categoryHeight,
                 child: Padding(
                   padding: const EdgeInsets.all(5.0),
@@ -110,13 +130,15 @@ class LateralMenu extends StatelessWidget {
                       Text(
                         'Servicio Social',
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.transparent,
-                            shadows: [
-                              Shadow(offset: Offset(0, -6), color: Colors.black)
-                            ]),
-                      ),
-                    ],
+                          fontSize: 15,
+                          color: Colors.transparent,
+                          shadows: [
+                            Shadow(offset: Offset(0, -6), color: Colors.black)
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

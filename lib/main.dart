@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:universidad/paginas/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
+import 'paginas/login.dart';
 
 void main() {
   runApp(UniversidadTecnologia());
@@ -21,7 +21,7 @@ class UniversidadTecnologia extends StatelessWidget {
             brightness: Brightness.light,
             primaryColor: Colors.red[800],
             primarySwatch: Colors.red),
-        home: PaginaHome(),
+        home: PaginaLogin(),
       );
     });
   }

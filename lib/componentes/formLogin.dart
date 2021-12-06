@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:universidad/paginas/home.dart';
 
 class FormLogin extends StatelessWidget {
   const FormLogin({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class FormLogin extends StatelessWidget {
         ),
         txtCarnet(size),
         txtPassword(size),
-        btnIngresar(size)
+        btnIngresar(size, context)
       ],
     );
   }
@@ -71,14 +72,16 @@ Widget txtPassword(size) {
   );
 }
 
-Widget btnIngresar(size) {
+Widget btnIngresar(size, context) {
   return Padding(
     padding: EdgeInsets.symmetric(
       horizontal: 20,
       vertical: 20,
     ),
     child: FlatButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => PaginaHome()));
+        },
         child: Material(
           elevation: 10,
           borderRadius: BorderRadius.circular(10),

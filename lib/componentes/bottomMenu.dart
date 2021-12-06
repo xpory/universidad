@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:universidad/paginas/contactanos.dart';
+import 'package:universidad/paginas/descargas.dart';
+import 'package:universidad/paginas/home.dart';
+import 'package:universidad/paginas/noticias.dart';
+import 'package:universidad/paginas/usuario.dart';
 
 class BottomBar extends StatelessWidget {
   @override
@@ -26,15 +31,27 @@ class BottomBar extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          Icon(
-                            Icons.home,
-                            color: Colors.white,
+                          IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => PaginaHome()));}, icon: Icon(
+                              Icons.home,
+                              color: Colors.white,
+                            )
                           ),
-                          Icon(Icons.description_outlined, color: Colors.white),
-                          Icon(Icons.drafts_outlined, color: Colors.white),
-                          Icon(Icons.cloud_download_outlined,
-                              color: Colors.white),
-                          Icon(Icons.person_outline, color: Colors.white)
+                          IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Noticias()));}, icon: Icon(
+                              Icons.description_outlined, color: Colors.white,
+                            )
+                          ),
+                          IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => PageContactanos()));}, icon: Icon(
+                              Icons.drafts_outlined, color: Colors.white,
+                            )
+                          ),
+                          IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Descargas()));}, icon: Icon(
+                              Icons.cloud_download_outlined, color: Colors.white
+                            )
+                          ),
+                          IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Usuario()));}, icon: Icon(
+                              Icons.person_outline, color: Colors.white
+                            )
+                          ),
                         ],
                       )),
                 ])));
